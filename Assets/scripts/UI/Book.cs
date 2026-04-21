@@ -6,11 +6,24 @@ using UnityEngine.InputSystem;
 public class Book : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject bookUI;
-    private bool isOpen = false;
+    [SerializeField] private PlayerInputHandler inputHandler;
 
+    private bool isOpen = false;
+    public static bool IsBookOpen;
+
+    void Update()
+    {
+        if(isOpen && inputHandler.InteractTriggered)
+        {
+            Interact();
+            inputHandler.ResetInteract();
+        }
+    }
     public void Interact()
     {
+
         isOpen = !isOpen;
+        IsBookOpen = isOpen;
         bookUI.SetActive(isOpen);
 
         Time.timeScale = isOpen ? 0f : 1f;

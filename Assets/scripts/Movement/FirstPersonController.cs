@@ -32,6 +32,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenuController.IsPaused || Book.IsBookOpen) return;
+
         HandleMovement();
         HandleRotation();
     }

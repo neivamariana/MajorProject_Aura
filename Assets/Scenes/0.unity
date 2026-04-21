@@ -1030,6 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Book
   bookUI: {fileID: 239387842}
+  inputHandler: {fileID: 1866320319}
 --- !u!1 &269884808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,6 +3171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   interactDistance: 20
   interactPrompt: {fileID: 1298310294}
+  inputHandler: {fileID: 1866320319}
 --- !u!1 &1314643231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,6 +3546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Book
   bookUI: {fileID: 1658196306}
+  inputHandler: {fileID: 1866320319}
 --- !u!1 &1392442495
 GameObject:
   m_ObjectHideFlags: 0

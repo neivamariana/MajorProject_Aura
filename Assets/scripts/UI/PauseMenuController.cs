@@ -7,7 +7,7 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private PlayerInputHandler inputHandler;
 
     private bool isPaused;
-
+    public static bool IsPaused;
 
 
     private void Start()
@@ -29,6 +29,7 @@ public class PauseMenuController : MonoBehaviour
     private void TogglePause()
     {
         isPaused = !isPaused;
+        IsPaused = isPaused;
 
         menuCanvas.SetActive(isPaused);
 

@@ -68,6 +68,12 @@ public class PlayerInputHandler : MonoBehaviour
         PauseTriggered = false;
     }
 
+    public void ResetInteract()
+    {
+        InteractTriggered = false;
+    }
+
+
     private void OnEnable()
     {
         playerControls.FindActionMap(actionMapName).Enable();
