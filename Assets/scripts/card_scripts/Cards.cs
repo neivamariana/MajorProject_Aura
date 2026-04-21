@@ -9,6 +9,9 @@ public class Cards : ScriptableObject
 
     public string description;
 
-    public Sprite art;
+    //public Sprite art;
+
+    public GameObject cardObject;
+
     
 }
