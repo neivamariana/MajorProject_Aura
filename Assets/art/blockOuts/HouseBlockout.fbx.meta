@@ -1,41 +1,11 @@
 fileFormatVersion: 2
-guid: cc615ff1d1196734e8154f16afa21895
+guid: 4c3a77d2cdf21074c9eb2dfa066a532c
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Chair
-    second: {fileID: 2100000, guid: 86cd5b511883a0c4ba34d9e3ceb405e5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Trim
-    second: {fileID: 2100000, guid: 84fe2f9e702f7724b9e9e0d58eceed82, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: door
-    second: {fileID: 2100000, guid: 8e55aaf65152f6c4d960578fba618089, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: outsidewalls
-    second: {fileID: 2100000, guid: 8e55aaf65152f6c4d960578fba618089, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: roofs
-    second: {fileID: 2100000, guid: 3b9f31759bf193c41840e0864357b679, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: walls
-    second: {fileID: 2100000, guid: 93bc520e9f9a34146b59a1e4b7cc9a5b, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1

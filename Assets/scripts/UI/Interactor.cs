@@ -9,28 +9,40 @@ public class Interactor : MonoBehaviour
 
 
     private IInteractable currentInteractable;
+    //private DialogueInteractor dialogueInteractor;
+
+
 
     void Update()
     {
 
-        if (Time.timeScale == 0f) return;
+
 
         CheckForInteractable();
 
         if (inputHandler != null && inputHandler.InteractTriggered)
         {
-            if (currentInteractable != null)
+            //dialogue  
+            if (DialogueManager.instance != null && DialogueManager.instance.IsDialogueActive)
+                    {
+                        DialogueManager.instance.ProgressDialogue();
+                    }
+            //book 
+            else if (Book.IsBookOpen)
             {
-                Debug.Log("interacting with object YIPEE");
-                currentInteractable.Interact();
-
+                Debug.Log("BOOK IDK MAN");
+                FindFirstObjectByType<Book>()?.Interact();
             }
+            //Normal interactions
+            else if (currentInteractable != null)
+            {
+                Debug.Log("Interacting with object #we did it guys");
+                currentInteractable.Interact();
+            }
+
             inputHandler.ResetInteract();
-
         }
-
     }
-
 
         void CheckForInteractable()
         {
@@ -38,10 +50,13 @@ public class Interactor : MonoBehaviour
 
             if (Physics.SphereCast(ray, 0.5f, out RaycastHit hit, interactDistance))
             {
-                IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+                IInteractable interactable = hit.collider.GetComponentInParent<IInteractable>();
 
                 if (interactable != null)
                 {
+                    //Debug.Log("I SPY WITH MY LITTLE EYE A...." + hit.collider.name);
+
+
                     currentInteractable = interactable;
                     interactPrompt.SetActive(true);
                     return;
@@ -52,6 +67,6 @@ public class Interactor : MonoBehaviour
             interactPrompt.SetActive(false);
         }
 
-   
+
 
 }
