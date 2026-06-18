@@ -36,7 +36,8 @@ public class Interactor : MonoBehaviour
             //Normal interactions
             else if (currentInteractable != null)
             {
-                Debug.Log("Interacting with object #we did it guys");
+                // Debug.Log("Interacting with object #we did it guys");
+                Debug.Log("Interacting with:" + currentInteractable);
                 currentInteractable.Interact();
             }
 

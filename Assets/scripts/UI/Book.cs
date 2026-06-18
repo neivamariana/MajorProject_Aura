@@ -12,7 +12,7 @@ public class Book : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-
+        Debug.Log("Book interact called !!!! yippeee");
         isOpen = !isOpen;
         IsBookOpen = isOpen;
         bookUI.SetActive(isOpen);
