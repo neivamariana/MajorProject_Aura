@@ -1000,7 +1000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &239387843
 Transform:
   m_ObjectHideFlags: 0
@@ -1685,7 +1685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &499626108
 Transform:
   m_ObjectHideFlags: 0
@@ -2664,13 +2664,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953462052}
+  - component: {fileID: 953462053}
   m_Layer: 0
   m_Name: NPCTRIAL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &953462052
 Transform:
   m_ObjectHideFlags: 0
@@ -2687,6 +2688,19 @@ Transform:
   - {fileID: 1933548277}
   m_Father: {fileID: 718174298}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &953462053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953462051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd955028f0dcd94c913d49e26f60790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue: {fileID: 11400000, guid: d2a0d117017f5ca43b229e42ed2e204c, type: 2}
 --- !u!1 &1018295609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,7 +3260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1264775871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3259,7 +3273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2362cbdb05fc0454681755fb4490d901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  dialoguePanel: {fileID: 365742238}
+  dialoguePanel: {fileID: 891876916}
   dialogueTxt: {fileID: 1671844528}
 --- !u!4 &1264775872
 Transform:
@@ -4895,7 +4909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1638733372
 Transform:
   m_ObjectHideFlags: 0
@@ -6179,7 +6193,6 @@ GameObject:
   - component: {fileID: 1933548281}
   - component: {fileID: 1933548280}
   - component: {fileID: 1933548279}
-  - component: {fileID: 1933548278}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -6202,19 +6215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 953462052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1933548278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933548276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd955028f0dcd94c913d49e26f60790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  dialogue: {fileID: 11400000, guid: d2a0d117017f5ca43b229e42ed2e204c, type: 2}
 --- !u!136 &1933548279
 CapsuleCollider:
   m_ObjectHideFlags: 0
