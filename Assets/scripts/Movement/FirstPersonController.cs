@@ -32,7 +32,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (PauseMenuController.IsPaused || Book.IsBookOpen) return;
+        if (PauseMenuController.IsPaused || Book.IsBookOpen || (DialogueManager.instance != null && DialogueManager.instance.IsDialogueActive)) return;
 
         HandleMovement();
         HandleRotation();
