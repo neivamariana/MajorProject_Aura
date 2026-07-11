@@ -29,6 +29,8 @@ public class DialoguePage
     public int nextPage = -1;
 
     public bool endConversation;
+
+    public DialogueAction action;
 }
 
 

@@ -17,12 +17,17 @@ MonoBehaviour:
   - conversationType: 0
     pages:
     - dialogueText: ' this is the intro'
-      choices: []
+      choices:
+      - choiceText: yes
+        nextPage: -1
+        action: 1
       nextPage: 0
-      endConversation: 0
+      endConversation: 1
+      action: 1
   - conversationType: 1
     pages:
     - dialogueText: help me with my quest
       choices: []
       nextPage: 0
       endConversation: 0
+      action: 0

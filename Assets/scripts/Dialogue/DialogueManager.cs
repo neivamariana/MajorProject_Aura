@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueData currentDialogue;
 
+    private NPCDialogue currentNpc;
+
     private int currentConversation;
     private int currentPage;
     private bool isDialogueActive;
@@ -26,7 +28,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    public void StartDialogue(DialogueData dialogue, int conversationIndex = 0)
+    public void StartDialogue(DialogueData dialogue, int conversationIndex = 0, NPCDialogue npc = null)
     {
         if (dialogue == null)
         {
@@ -49,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("dialogue has started yippeeeee!!!");
 
         currentDialogue = dialogue;
+        currentNpc = npc;
         currentConversation = conversationIndex;
         currentPage = 0;
         isDialogueActive = true;
@@ -73,6 +76,12 @@ public class DialogueManager : MonoBehaviour
 
         npcNameTxt.text = currentDialogue.npcName;
         dialogueTxt.text = page.dialogueText;
+
+        if(page.action != DialogueAction.None)
+        {
+            PerformAction(page.action);
+
+        }
 
         ClearButtons();
 
@@ -159,6 +168,7 @@ public class DialogueManager : MonoBehaviour
 
 
             case DialogueAction.StartQuest:
+                //QuestManager.instance.StartQuest(currentNpc.questData);
                 Debug.Log("start quest works!!");
                 break;
 

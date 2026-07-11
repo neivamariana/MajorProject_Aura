@@ -4,6 +4,8 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 {
     [Header("Dialogue")]
     public DialogueData dialogueData;
+    [Header("Quest")]
+    public QuestData questData;
 
     [Header("Current Conversation")]
     public ConversationType currentConversation = ConversationType.Intro;
@@ -13,7 +15,7 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     {
         Debug.Log("NPC wants to talk :D");
 
-        DialogueManager.instance.StartDialogue(dialogueData, (int)currentConversation);
+        DialogueManager.instance.StartDialogue(dialogueData, (int)currentConversation, this);
     }
 
 
